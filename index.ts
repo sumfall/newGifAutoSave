@@ -8,14 +8,14 @@ import { definePluginSettings } from "@api/Settings";
 import { Logger } from "@utils/Logger";
 import definePlugin, { OptionType } from "@utils/types";
 import { findByPropsLazy, proxyLazyWebpack } from "@webpack";
-import { ChannelStore, FluxDispatcher, Toasts, UserSettingsActionCreators, UserStore } from "@webpack/common";
+import { ChannelStore, FluxDispatcher, UserSettingsActionCreators, UserStore } from "@webpack/common";
 
 const logger = new Logger("GifAutoSave");
 
 // Discord proto GIF format enum
 const enum GifFormat {
     GIFV = 1, // tenor/giphy (embed type "gifv")
-    GIF = 2,  // regular .gif attachment
+    GIF = 2, // regular .gif attachment
 }
 
 // Same binary read options used by fakeNitro for proto cloning
